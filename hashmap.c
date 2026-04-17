@@ -70,16 +70,16 @@ void insertMap(HashMap * map, char * key, void * value) {
 // Recuerde actualizar el índice current a la posición encontrada. Recuerde que el arreglo es circular.
 
 Pair * searchMap(HashMap * map,  char * key) {   
-    long indice = hash(key, map->capacity);
+    long indice = hash(key, map->capacity); // obtenemos la posicion que se supone que esta, asi que la usamos como indice del arreglo
     
-    while(map->buckets[indice] != NULL)
+    while(map->buckets[indice] != NULL) // hasta que encontremos una posicion vacia,
     {
-        if(map->buckets[indice]->key != NULL && is_equal(map->buckets[indice]->key, key))
+        if(is_equal(map->buckets[indice]->key, key)) // comparamos claves
         {
-            map->current = indice;
-            return map->buckets[indice];
+            map->current = indice; // actualizamos las posiciones
+            return map->buckets[indice]; // retornamos 
         }
-        indice = (indice + 1) % map->capacity;
+        indice = (indice + 1) % map->capacity; // como es circular usamos una resolucion lineal sumamos 1 al indice y hacemos el %
     }
 
     return NULL;
