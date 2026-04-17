@@ -76,8 +76,8 @@ Pair * searchMap(HashMap * map,  char * key) {
     {
         if(is_equal(map->buckets[indice]->key, key)) // comparamos claves
         {
-            map->current = indice; // actualizamos las posiciones
-            return map->buckets[indice]; // retornamos 
+            map->current = indice; // actualizamos ya que el indice sera la ultima posicion que visitamos
+            return map->buckets[indice]; // retornamos el pair
         }
         indice = (indice + 1) % map->capacity; // como es circular usamos una resolucion lineal sumamos 1 al indice y hacemos el %
     }
