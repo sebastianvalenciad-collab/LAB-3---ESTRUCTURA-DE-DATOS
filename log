@@ -36,3 +36,14 @@ hashmap.c:74:10: error: unused variable ‘start’ [-Werror=unused-variable]
       |          ^~~~~
 cc1: all warnings being treated as errors
 ce2987d
+Fri Apr 17 06:41:43 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:78:17: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+   78 |         if(map->bucket[index]->key != NULL && is_equal(map->buckets[index]->key, key))
+      |                 ^~~~~~
+      |                 buckets
+6d7cd49
