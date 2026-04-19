@@ -114,7 +114,7 @@ void eraseMap(HashMap * map,  char * key)
     Pair * p = searchMap(map, key);
     if(p != NULL)
     {
-        pair->key = NULL;
+        p->key = NULL;
         map->size--;
     }
 }
