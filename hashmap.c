@@ -69,7 +69,7 @@ void insertMap(HashMap * map, char * key, void * value)
 
     while(map->buckets[indice] != NULL)
     {
-        if(map->buckets[indice]->key != NULL && isequal(map->buckets[indice]->key, key)) return;
+        if(map->buckets[indice]->key != NULL && is_equal(map->buckets[indice]->key, key)) return;
         indice = (indice + 1) % map->capacity;
     }
     map->buckets[indice] = createPair(key, value);
