@@ -97,3 +97,23 @@ Sun Apr 19 03:48:04 AM UTC 2026:
  tests:  3|6
 total_score: 10/60
 8f8e9a9
+Sun Apr 19 07:16:45 PM UTC 2026: 
+ hashmap.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:50:5: error: ‘map’ undeclared (first use in this function); did you mean ‘mapa’?
+   50 |     map->buckets = calloc(capacity, sizeof(Pair *));
+      |     ^~~
+      |     mapa
+hashmap.c:50:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:51:5: error: ‘max’ undeclared (first use in this function); did you mean ‘fmax’?
+   51 |     max->size = 0;
+      |     ^~~
+      |     fmax
+hashmap.c:49:15: error: unused variable ‘mapa’ [-Werror=unused-variable]
+   49 |     HashMap * mapa = malloc(sizeof(HashMap));
+      |               ^~~~
+cc1: all warnings being treated as errors
+2e221e3
