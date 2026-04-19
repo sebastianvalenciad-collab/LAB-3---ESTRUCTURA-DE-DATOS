@@ -143,3 +143,14 @@ hashmap.c:77:18: error: assignment to ‘long int’ from ‘char * (*)(const ch
    77 |     map->current = index;
       |                  ^
 d76e465
+Sun Apr 19 07:28:44 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:72:49: error: implicit declaration of function ‘isequal’; did you mean ‘is_equal’? [-Wimplicit-function-declaration]
+   72 |         if(map->buckets[indice]->key != NULL && isequal(map->buckets[indice]->key, key)) return;
+      |                                                 ^~~~~~~
+      |                                                 is_equal
+d751cab
