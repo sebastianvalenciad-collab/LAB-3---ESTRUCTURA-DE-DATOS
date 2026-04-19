@@ -129,3 +129,17 @@ Sun Apr 19 07:19:10 PM UTC 2026:
  tests:  4|5
 total_score: 15/60
 feb988e
+Sun Apr 19 07:28:34 PM UTC 2026: 
+ hashmap.c | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:72:49: error: implicit declaration of function ‘isequal’; did you mean ‘is_equal’? [-Wimplicit-function-declaration]
+   72 |         if(map->buckets[indice]->key != NULL && isequal(map->buckets[indice]->key, key)) return;
+      |                                                 ^~~~~~~
+      |                                                 is_equal
+hashmap.c:77:18: error: assignment to ‘long int’ from ‘char * (*)(const char *, int)’ makes integer from pointer without a cast [-Wint-conversion]
+   77 |     map->current = index;
+      |                  ^
+d76e465
