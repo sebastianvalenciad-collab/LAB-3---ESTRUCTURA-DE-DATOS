@@ -92,7 +92,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     
     while(map->buckets[indice] != NULL) // hasta que encontremos una posicion vacia,
     {
-        if(is_equal(map->buckets[indice]->key, key)) // comparamos claves
+        if(map->buckets[indice]->key != NULL && is_equal(map->buckets[indice]->key, key)) // comparamos claves
         {
             map->current = indice; // actualizamos ya que el indice sera la ultima posicion que visitamos
             return map->buckets[indice]; // retornamos el pair
@@ -163,9 +163,10 @@ Pair * nextMap(HashMap * map)
 //   d - Inicialice size a 0.
 //   e - Inserte los elementos válidos del arreglo old_buckets en el mapa (use la función insertMap que ya implementó).
 
-void enlarge(HashMap * map) {
+void enlarge(HashMap * map) 
+{
     enlarge_called = 1; //no borrar (testing purposes)
-
+    Pair
 
 }
 
